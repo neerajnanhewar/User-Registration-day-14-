@@ -1,11 +1,9 @@
-#!/bin/bash -x
-
-function user_validate()
-{
+#!/bin/bash 
+function user_validate(){
 input=$1
-pattern=$2 
+pattern=$2
 key=0
-pattern="^([A-Z]{1})[a-z]{2}"
+#pattern="^([A-Z]{1})[a-z]{2}"
 while [ $key -eq 0 ]
 do
 if [[ $input =~ $pattern ]]
@@ -35,4 +33,9 @@ echo "Enter Your Last Email "
 read email
 pattern="^[a-zA-Z0-9]{1,}([._+-][0-9a-zA-Z]+)*[@]{1}[0-9a-zA-Z]{1,}\.[a-zA-Z]{2,4}([.][a-zA-Z]{2}){0,1}$"
 user_validate $email $pattern
+
+echo "Enter the valid mobile number with country code "
+read mo_num
+pattern="^(([0-9]{2}\s)[0-9]{10})$"
+user_validate $mo_num $pattern
 
