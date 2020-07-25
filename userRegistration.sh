@@ -13,7 +13,7 @@ then
 	key=1
 else
 	echo "Not valid INPUT"
-	read $input
+	read input
 fi
 done
 }
