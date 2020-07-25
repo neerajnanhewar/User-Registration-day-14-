@@ -1,18 +1,17 @@
-#!/bin/bash 
+#!/bin/bash -x
 function user_validate(){
 input=$1
 pattern=$2
 key=0
-#pattern="^([A-Z]{1})[a-z]{2}"
 while [ $key -eq 0 ]
 do
 if [[ $input =~ $pattern ]]
 then
-	echo $input "is valid INPUT"
-	key=1
+        echo $input "is valid INPUT"
+        key=1
 else
-	echo "Not valid INPUT"
-	read input
+        echo "Not valid INPUT"
+        read input
 fi
 done
 }
@@ -38,4 +37,3 @@ echo "Enter the valid mobile number with country code "
 read mo_num
 pattern="^(([0-9]{2}\s)[0-9]{10})$"
 user_validate $mo_num $pattern
-
