@@ -51,3 +51,4 @@ user_validate $lastname
 echo "Enter Your Last Email "
 read email
 email_validate $email
+
