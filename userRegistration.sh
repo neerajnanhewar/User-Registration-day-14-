@@ -35,6 +35,11 @@ user_validate $email $pattern
 
 echo "Enter the valid mobile number with country code "
 read mo_num
-pattern="^(([0-9]{2}[ ]{1})[0-9]{10})$"
+pattern="^[0-9]{2}[ ]{1}[0-9]{10}$"
 user_validate "$mo_num" "$pattern"
 
+echo "Password should be minimum 8 charcter long"
+echo "Enter password.."
+read pass
+pattern=".{8,}"
+user_validate $pass $pattern
