@@ -41,5 +41,5 @@ user_validate "$mo_num" "$pattern"
 echo "Password should be minimum 8 charcter long"
 echo "Enter password.."
 read pass
-pattern=".*[A-Z]{1,}.{6,}"
+pattern="^.*([A-Z]{1,}).*([0-9]{1,}).{6,}"
 user_validate $pass $pattern
