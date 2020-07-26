@@ -1,4 +1,4 @@
-#!/bin/bash -x
+x#!/bin/bash 
 function user_validate(){
 input=$1
 pattern=$2
@@ -41,5 +41,5 @@ user_validate "$mo_num" "$pattern"
 echo "Password should be minimum 8 charcter long"
 echo "Enter password.."
 read pass
-pattern=".{8,}"
+pattern=".*[A-Z]{1,}.{6,}"
 user_validate $pass $pattern
