@@ -35,5 +35,6 @@ user_validate $email $pattern
 
 echo "Enter the valid mobile number with country code "
 read mo_num
-pattern="^(([0-9]{2}\s)[0-9]{10})$"
-user_validate $mo_num $pattern
+pattern="^(([0-9]{2}[ ]{1})[0-9]{10})$"
+user_validate "$mo_num" "$pattern"
+
